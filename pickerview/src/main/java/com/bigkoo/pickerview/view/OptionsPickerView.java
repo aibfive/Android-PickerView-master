@@ -95,6 +95,7 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
         wheelOptions.setDividerType(mPickerOptions.dividerType);
         wheelOptions.setLineSpacingMultiplier(mPickerOptions.lineSpacingMultiplier);
         wheelOptions.set3D(mPickerOptions.is3D);
+        wheelOptions.setScaleContent(mPickerOptions.scaleContent);
         wheelOptions.setTextColorOut(mPickerOptions.textColorOut);
         wheelOptions.setTextColorCenter(mPickerOptions.textColorCenter);
         wheelOptions.isCenterLabel(mPickerOptions.isCenterLabel);

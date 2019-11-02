@@ -88,6 +88,11 @@ public class TimePickerBuilder {
         return this;
     }
 
+    public TimePickerBuilder setScaleContent(float scaleContent) {
+        mPickerOptions.scaleContent = scaleContent;
+        return this;
+    }
+
     /**
      * ViewGroup 类型的容器
      *

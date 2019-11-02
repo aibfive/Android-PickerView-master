@@ -228,6 +228,12 @@ public class WheelOptions<T> {
         wv_option3.set3D(is3D);
     }
 
+    public void setScaleContent(float scaleContent) {
+        wv_option1.setScaleContent(scaleContent);
+        wv_option2.setScaleContent(scaleContent);
+        wv_option3.setScaleContent(scaleContent);
+    }
+
     private void setLineSpacingMultiplier() {
 
     }

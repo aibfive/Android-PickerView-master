@@ -141,6 +141,8 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         wheelTime.setDividerType(mPickerOptions.dividerType);
         wheelTime.setLineSpacingMultiplier(mPickerOptions.lineSpacingMultiplier);
         wheelTime.setTextColorOut(mPickerOptions.textColorOut);
+        wheelTime.set3D(mPickerOptions.is3D);
+        wheelTime.setScaleContent(mPickerOptions.scaleContent);
         wheelTime.setTextColorCenter(mPickerOptions.textColorCenter);
         wheelTime.isCenterLabel(mPickerOptions.isCenterLabel);
     }

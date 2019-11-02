@@ -51,6 +51,7 @@ public class PickerOptions {
 
     public boolean isRestoreItem = false; //切换时，还原第一项
     public boolean is3D = false; //是否3D
+    public float scaleContent = 0.9F; //是否3D
 
 
     //time picker

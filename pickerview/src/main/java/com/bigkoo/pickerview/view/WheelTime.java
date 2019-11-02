@@ -865,6 +865,34 @@ public class WheelTime {
     }
 
     /**
+     * 设置是否3D
+     *
+     * @param is3D
+     */
+    public void set3D(boolean is3D) {
+        wv_day.set3D(is3D);
+        wv_month.set3D(is3D);
+        wv_year.set3D(is3D);
+        wv_hours.set3D(is3D);
+        wv_minutes.set3D(is3D);
+        wv_seconds.set3D(is3D);
+    }
+
+    /**
+     * 非中间文字则用此控制高度，压扁形成3d错觉
+     *
+     * @param scaleContent
+     */
+    public void setScaleContent(float scaleContent) {
+        wv_day.setScaleContent(scaleContent);
+        wv_month.setScaleContent(scaleContent);
+        wv_year.setScaleContent(scaleContent);
+        wv_hours.setScaleContent(scaleContent);
+        wv_minutes.setScaleContent(scaleContent);
+        wv_seconds.setScaleContent(scaleContent);
+    }
+
+    /**
      * @param isCenterLabel 是否只显示中间选中项的
      */
     public void isCenterLabel(boolean isCenterLabel) {
