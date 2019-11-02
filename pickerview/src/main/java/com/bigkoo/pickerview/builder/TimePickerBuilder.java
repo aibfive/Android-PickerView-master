@@ -83,6 +83,11 @@ public class TimePickerBuilder {
         return this;
     }
 
+    public TimePickerBuilder set3D(boolean is3D) {
+        mPickerOptions.is3D = is3D;
+        return this;
+    }
+
     /**
      * ViewGroup 类型的容器
      *

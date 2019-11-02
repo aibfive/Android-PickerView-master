@@ -222,6 +222,12 @@ public class WheelOptions<T> {
         wv_option3.setTextSize(textSize);
     }
 
+    public void set3D(boolean is3D) {
+        wv_option1.set3D(is3D);
+        wv_option2.set3D(is3D);
+        wv_option3.set3D(is3D);
+    }
+
     private void setLineSpacingMultiplier() {
 
     }

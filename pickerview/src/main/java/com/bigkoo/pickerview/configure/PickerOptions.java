@@ -50,6 +50,7 @@ public class PickerOptions {
     public boolean cyclic3 = false;
 
     public boolean isRestoreItem = false; //切换时，还原第一项
+    public boolean is3D = false; //是否3D
 
 
     //time picker

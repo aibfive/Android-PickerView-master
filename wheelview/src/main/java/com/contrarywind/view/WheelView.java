@@ -54,6 +54,7 @@ public class WheelView extends View {
 
     private boolean isOptions = false;
     private boolean isCenterLabel = true;
+    private boolean is3D = false;
 
     // Timer mTimer;
     private ScheduledExecutorService mExecutor = Executors.newSingleThreadScheduledExecutor();
@@ -503,25 +504,33 @@ public class WheelView extends View {
                     // 条目经过第一条线
                     canvas.save();
                     canvas.clipRect(0, 0, measuredWidth, firstLineY - translateY);
-                    canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    if(is3D) {
+                        canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    }
                     setOutPaintStyle(offsetCoefficient, angle);
                     canvas.drawText(contentText, drawOutContentStart, maxTextHeight, paintOuterText);
                     canvas.restore();
                     canvas.save();
                     canvas.clipRect(0, firstLineY - translateY, measuredWidth, (int) (itemHeight));
-                    canvas.scale(1.0F, (float) Math.sin(radian) * 1.0F);
+                    if(is3D) {
+                        canvas.scale(1.0F, (float) Math.sin(radian) * 1.0F);
+                    }
                     canvas.drawText(contentText, drawCenterContentStart, maxTextHeight - CENTER_CONTENT_OFFSET, paintCenterText);
                     canvas.restore();
                 } else if (translateY <= secondLineY && maxTextHeight + translateY >= secondLineY) {
                     // 条目经过第二条线
                     canvas.save();
                     canvas.clipRect(0, 0, measuredWidth, secondLineY - translateY);
-                    canvas.scale(1.0F, (float) Math.sin(radian) * 1.0F);
+                    if(is3D) {
+                        canvas.scale(1.0F, (float) Math.sin(radian) * 1.0F);
+                    }
                     canvas.drawText(contentText, drawCenterContentStart, maxTextHeight - CENTER_CONTENT_OFFSET, paintCenterText);
                     canvas.restore();
                     canvas.save();
                     canvas.clipRect(0, secondLineY - translateY, measuredWidth, (int) (itemHeight));
-                    canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    if(is3D) {
+                        canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    }
                     setOutPaintStyle(offsetCoefficient, angle);
                     canvas.drawText(contentText, drawOutContentStart, maxTextHeight, paintOuterText);
                     canvas.restore();
@@ -537,7 +546,9 @@ public class WheelView extends View {
                     // 其他条目
                     canvas.save();
                     canvas.clipRect(0, 0, measuredWidth, (int) (itemHeight));
-                    canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    if(is3D) {
+                        canvas.scale(1.0F, (float) Math.sin(radian) * SCALE_CONTENT);
+                    }
                     setOutPaintStyle(offsetCoefficient, angle);
                     // 控制文字水平偏移距离
                     canvas.drawText(contentText, drawOutContentStart + textXOffset * offsetCoefficient, maxTextHeight, paintOuterText);
@@ -548,6 +559,10 @@ public class WheelView extends View {
             }
             counter++;
         }
+    }
+
+    public void set3D(boolean is3D){
+        this.is3D = is3D;
     }
 
     //设置文字倾斜角度，透明度
