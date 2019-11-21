@@ -243,6 +243,15 @@ public class OptionsPickerBuilder {
         return this;
     }
 
+    public OptionsPickerBuilder set3D(boolean is3D) {
+        mPickerOptions.is3D = is3D;
+        return this;
+    }
+
+    public OptionsPickerBuilder setScaleContent(float scaleContent) {
+        mPickerOptions.scaleContent = scaleContent;
+        return this;
+    }
 
     /**
      * 设置最大可见数目

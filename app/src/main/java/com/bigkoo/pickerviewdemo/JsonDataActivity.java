@@ -121,7 +121,8 @@ public class JsonDataActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(JsonDataActivity.this, tx, Toast.LENGTH_SHORT).show();
             }
         })
-
+                .set3D(true)
+                .setScaleContent(1)
                 .setTitleText("城市选择")
                 .setDividerColor(Color.BLACK)
                 .setTextColorCenter(Color.BLACK) //设置选中项文字颜色
